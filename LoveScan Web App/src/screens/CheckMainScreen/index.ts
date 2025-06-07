@@ -1,0 +1,1 @@
+export { CheckMainScreen } from "./CheckMainScreen";

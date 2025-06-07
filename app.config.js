@@ -1,0 +1,50 @@
+export default {
+  expo: {
+    name: "DSTA LoveScan",
+    slug: "dsta-lovescan-mobile",
+    version: "1.0.0",
+    orientation: "portrait",
+    icon: "./assets/images/icon.png",
+    scheme: "myapp",
+    userInterfaceStyle: "light",
+    newArchEnabled: true,
+    splash: {
+      image: "./assets/images/splash.png",
+      resizeMode: "contain",
+      backgroundColor: "#8b0000"
+    },
+    ios: {
+      supportsTablet: true,
+      infoPlist: {
+        NSCameraUsageDescription: "This app uses camera to scan and analyze suspicious profiles and messages.",
+        NSPhotoLibraryUsageDescription: "This app needs access to photo library to upload and analyze images for scam detection."
+      }
+    },
+    android: {
+      adaptiveIcon: {
+        foregroundImage: "./assets/images/adaptive-icon.png",
+        backgroundColor: "#8b0000"
+      },
+      edgeToEdgeEnabled: true,
+      permissions: [
+        "android.permission.CAMERA",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE"
+      ]
+    },
+    web: {
+      bundler: "metro",
+      favicon: "./assets/images/favicon.png"
+    },
+    plugins: [
+      "expo-image-picker",
+      "expo-document-picker",
+      "expo-camera",
+      "expo-media-library"
+    ],
+    extra: {
+      supabaseUrl: process.env.EXPO_PUBLIC_SUPABASE_URL || 'https://your-project.supabase.co',
+      supabaseAnonKey: process.env.EXPO_PUBLIC_SUPABASE_ANON_KEY || 'your-anon-key',
+    }
+  }
+}; 
