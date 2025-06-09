@@ -88,7 +88,7 @@ export function SubmitScamReportMain({ navigation, route }: SubmitScamReportMain
   };
 
   const handleProfileScan = () => {
-    navigation?.navigate('ReverseImageSearch', {
+    navigation?.navigate('ProfileScan', {
       existingData: uploadedData.profile,
       returnTo: 'SubmitScamReportMain'
     });
