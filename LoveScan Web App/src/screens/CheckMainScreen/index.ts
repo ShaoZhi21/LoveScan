@@ -1,1 +1,0 @@
-export { CheckMainScreen } from "./CheckMainScreen";
